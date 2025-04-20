@@ -1,0 +1,107 @@
+
+/* Estilos para o componente Login */
+.login-bg {
+    min-height: 100vh;
+    background: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px 0 rgba(14, 38, 74, 0.10);
+    padding: 2rem;
+    margin: 2rem;
+  }
+  
+  .login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  
+  .login-header-icon {
+    color: #22c55e;
+    margin-bottom: 8px;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #17854c;
+    margin-bottom: 4px;
+  }
+  
+  .login-desc {
+    color: #6b7280;
+    text-align: center;
+    font-size: 0.99rem;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .login-label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 1rem;
+  }
+  
+  .login-input-group {
+    position: relative;
+  }
+  
+  .login-input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 38px 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #374151;
+    margin-bottom: 0;
+    transition: border 0.2s;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .login-input:focus {
+    border: 1.5px solid #22c55e;
+    background: #fff;
+  }
+  
+  .login-toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background: none;
+    border: none;
+    padding: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .login-btn {
+    width: 100%;
+    background: #22c55e;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .login-btn:hover {
+    background: #17854c;
+  }
