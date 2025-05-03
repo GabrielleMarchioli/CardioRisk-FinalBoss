@@ -12,7 +12,7 @@ export default function ForgotPassword() {
     setMessage("");
     setError("");
     try {
-      const response = await fetch("http://localhost:5000/api/medicos/forgot-password", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

@@ -31,7 +31,7 @@ export default function CalcularRisco() {
       }
 
       try {
-        const verifyResponse = await fetch("http://localhost:5000/api/medicos/verify", {
+        const verifyResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/verify`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function CalcularRisco() {
           throw new Error("Token inválido.");
         }
 
-        const pacientesResponse = await fetch("http://localhost:5000/api/pacientes", {
+        const pacientesResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/pacientes`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
@@ -71,7 +71,7 @@ export default function CalcularRisco() {
       const fetchHistorico = async () => {
         const token = localStorage.getItem('token');
         try {
-          const response = await fetch(`http://localhost:5000/api/riscos/paciente/${selectedPaciente._id}`, {
+          const response = await fetch(`${process.env.REACT_APP_API_URL}/api/riscos/paciente/${selectedPaciente._id}`, {
             headers: {
               "Content-Type": "application/json",
               "Authorization": `Bearer ${token}`,
@@ -209,7 +209,7 @@ export default function CalcularRisco() {
     const token = localStorage.getItem('token');
     try {
       const riscoCalculado = calcularRisco();
-      const response = await fetch("http://localhost:5000/api/riscos", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/riscos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -232,7 +232,7 @@ export default function CalcularRisco() {
       if (response.ok) {
         setRisco(riscoCalculado);
         // Atualizar histórico após novo cálculo
-        const historicoResponse = await fetch(`http://localhost:5000/api/riscos/paciente/${selectedPaciente._id}`, {
+        const historicoResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/riscos/paciente/${selectedPaciente._id}`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
@@ -569,7 +569,7 @@ export default function CalcularRisco() {
             <div className="bg-green-50 rounded-lg shadow-md p-6 mb-6">
               <h2 className="text-xl font-semibold text-gray-800 mb-2">Resultado do Cálculo</h2>
               <p className="text-gray-600">
-                Risco cardiovascular em 10 anos para {selectedPaciente?.nome} (CPF: {selectedPaciente?.cpf}):{" "}
+                Risco cardiovascular em 10 anos:{" "}
                 <span className="text-green-700 font-bold">{risco}</span>
               </p>
             </div>

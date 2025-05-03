@@ -6,6 +6,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Dashboard from "./pages/dashboard";
 import Pacientes from "./pages/pacientes";
+import CalcularRisco from "./pages/calcularRisco"
+import Paciente from "./pages/pacientes"
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/Calcular-Risco" element={<CalcularRisco />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/pacientes" element={<Pacientes />} />
+        <Route path="/pacientes" element={<Paciente />} />
         <Route path="/" element={<Login />} />
       </Routes>
     </Router>

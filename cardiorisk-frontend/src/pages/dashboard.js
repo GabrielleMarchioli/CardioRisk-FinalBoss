@@ -19,7 +19,7 @@ export default function Dashboard() {
   const fetchConsultas = async (token) => {
     try {
       // Buscar total de consultas do dia
-      const todayResponse = await fetch("http://localhost:5000/api/consultas/today", {
+      const todayResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/consultas/today`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -33,7 +33,7 @@ export default function Dashboard() {
       setConsultasHoje(todayData.count || 0);
 
       // Buscar consultas por hora
-      const hourlyResponse = await fetch("http://localhost:5000/api/consultas/hourly", {
+      const hourlyResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/consultas/hourly`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -63,7 +63,7 @@ export default function Dashboard() {
 
       try {
         // Verificar token e pegar nome do médico
-        const response = await fetch("http://localhost:5000/api/medicos/verify", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/verify`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

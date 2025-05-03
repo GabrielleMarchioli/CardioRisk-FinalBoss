@@ -15,7 +15,7 @@ export default function Login() {
     setError("");
     console.log("Iniciando login com:", { email, password });
     try {
-      const response = await fetch("http://localhost:5000/api/medicos/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, senha: password }),
@@ -45,7 +45,7 @@ export default function Login() {
     setForgotMessage("");
     setError("");
     try {
-      const response = await fetch("http://localhost:5000/api/medicos/forgot-password", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: forgotEmail }),

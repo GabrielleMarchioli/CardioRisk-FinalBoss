@@ -31,7 +31,7 @@ export default function Pacientes() {
       }
 
       try {
-        const verifyResponse = await fetch("http://localhost:5000/api/medicos/verify", {
+        const verifyResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/verify`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function Pacientes() {
           throw new Error("Token inválido.");
         }
 
-        const pacientesResponse = await fetch("http://localhost:5000/api/pacientes", {
+        const pacientesResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/pacientes`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
@@ -120,7 +120,7 @@ export default function Pacientes() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/pacientes", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/pacientes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -181,7 +181,7 @@ export default function Pacientes() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/pacientes/${pacienteEditado._id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/pacientes/${pacienteEditado._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

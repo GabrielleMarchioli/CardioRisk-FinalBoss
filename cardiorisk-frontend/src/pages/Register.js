@@ -14,7 +14,7 @@ export default function Register() {
     e.preventDefault();
     setError("");
     try {
-      const response = await fetch("http://localhost:5000/api/medicos/register", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/medicos/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome, email, senha: password, crm }),
