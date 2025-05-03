@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+CardioRisk ❤️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CardioRisk é um sistema web desenvolvido para médicos calcularem o risco cardiovascular de pacientes, oferecendo uma interface amigável e funcionalidades como autenticação segura, dashboard com estatísticas, cadastro de pacientes e redefinição de senha.
+📋 Funcionalidades
 
-## Available Scripts
+Autenticação de médicos: Login seguro com e-mail e senha.
+Redefinição de senha: Recuperação de conta via "Esqueceu a senha" com e-mail.
+Dashboard: Visualização de consultas e gráficos.
+Cadastro de pacientes: Formulário para registrar pacientes.
+Cálculo de risco cardiovascular: Baseado em modelos como SCORE.
+Responsividade: Interface adaptada para desktop e mobile.
 
-In the project directory, you can run:
+🛠️ Tecnologias Utilizadas
 
-### `npm start`
+Frontend: React, Tailwind CSS
+Backend: Node.js, Express
+Banco de Dados: MongoDB
+Outros: Chart.js (gráficos), Nodemailer (e-mails), bcrypt (segurança)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🚀 Instalação
+Pré-requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Node.js (v20.x ou superior)
+MongoDB (local ou Atlas)
+Git
 
-### `npm test`
+Passos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone o repositório:
+git clone https://github.com/SEU_USUARIO/CardioRisk.git
+cd CardioRisk
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instale as dependências do frontend:
+cd cardiorisk-frontend
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instale as dependências do backend:
+cd ../cardiorisk-backend
+npm install
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Configure as variáveis de ambiente:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Crie um arquivo .env na pasta cardiorisk-backend com:MONGO_URI=sua_uri_do_mongodb
+JWT_SECRET=sua_chave_secreta
+PORT=5000
+EMAIL_USER=seuemail@gmail.com
+EMAIL_PASS=sua_senha_de_app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Inicie o backend:
+cd cardiorisk-backend
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Inicie o frontend (em outro terminal):
+cd cardiorisk-frontend
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Acesse o app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Abra http://localhost:3000 no navegador.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+🖥️ Uso
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Faça login com suas credenciais de médico.
+Use "Esqueceu a senha?" pra recuperar o acesso, se necessário.
+No dashboard, veja as estatísticas de consultas.
+Cadastre pacientes e calcule o risco cardiovascular.
 
-### Deployment
+🤝 Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Faça um fork do projeto.
+Crie uma branch pra sua feature (git checkout -b feature/nova-funcionalidade).
+Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade').
+Envie pro repositório remoto (git push origin feature/nova-funcionalidade).
+Abra um Pull Request.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📜 Licença
+Este projeto está sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
