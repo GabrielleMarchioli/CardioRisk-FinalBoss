@@ -15,7 +15,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'https://cardio-risk-final-boss.vercel.app',
+  origin: 'https://cardio-risk-final-boss-28i2wnmxs-gabriellemarchiolis-projects.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
