@@ -92,18 +92,18 @@ export default function Pacientes() {
   // Formatar data para input type="date" (YYYY-MM-DD)
   const formatarDataParaInput = (data) => {
     const date = new Date(data);
-    const ano = date.getFullYear();
-    const mes = String(date.getMonth() + 1).padStart(2, '0');
-    const dia = String(date.getDate()).padStart(2, '0');
+    const ano = date.getUTCFullYear();
+    const mes = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const dia = String(date.getUTCDate()).padStart(2, '0');
     return `${ano}-${mes}-${dia}`;
   };
 
   // Formatar data para exibição (DD/MM/YYYY)
   const formatarDataNascimento = (data) => {
     const date = new Date(data);
-    const dia = String(date.getDate()).padStart(2, '0');
-    const mes = String(date.getMonth() + 1).padStart(2, '0');
-    const ano = date.getFullYear();
+    const dia = String(date.getUTCDate()).padStart(2, '0');
+    const mes = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const ano = date.getUTCFullYear();
     return `${dia}/${mes}/${ano}`;
   };
 
